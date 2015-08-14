@@ -9,8 +9,8 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
 
     it "returns the information about a reporter on a hash" do
-      user_response = JSON.parse(response.body, sybmolize_names: true)
-      expect(user_response['email']).to eql @user.email
+      user_response = json_response[:user]
+      expect(user_response[:email]).to eql @user.email
     end
 
     it { should respond_with 200 }
@@ -64,7 +64,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       end
 
       it "renders the json representation for the updated user" do
-        user_response = json_response
+        user_response = json_response[:user]
         expect(user_response[:email]).to eql("newemail@example.com")
       end
 
