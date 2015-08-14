@@ -28,9 +28,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# API gems
-gem 'active_model_serializers'
-
 gem 'devise'
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
 gem 'compass-rails'
